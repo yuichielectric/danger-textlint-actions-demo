@@ -1,0 +1,25 @@
+{
+  "name": "danger-textlint-actions-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "textlint-rule-preset-japanese": "^2.0.1",
+    "textlint-rule-preset-jtf-style": "^2.3.3",
+    "textlint-rule-prh": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuichielectric/danger-textlint-actions-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuichielectric/danger-textlint-actions-demo/issues"
+  },
+  "homepage": "https://github.com/yuichielectric/danger-textlint-actions-demo#readme"
+}
