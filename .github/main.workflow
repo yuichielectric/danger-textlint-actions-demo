@@ -3,7 +3,18 @@ workflow "New workflow" {
   on = "pull_request"
 }
 
+action "debug" {
+  uses = "actions/bin/debug@master"
+}
+
+action "ls" {
+  users = "actions/bin/sh@master"
+  args = ["ls" "-l" "./node_modules"]
+  needs = ["debug"]
+}
+
 action "npm install" {
+  needs = ["ls"]
   uses = "actions/npm@c555744"
   args = "install"
 }
