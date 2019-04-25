@@ -4,17 +4,17 @@ workflow "New workflow" {
 }
 
 action "debug" {
+  needs = ["npm install"]
   uses = "actions/bin/debug@master"
 }
 
 action "ls" {
   uses = "actions/bin/sh@master"
-  args = ["ls", "-l", "./node_modules"]
+  args = ["ls -l ./node_modules"]
   needs = ["debug"]
 }
 
 action "npm install" {
-  needs = ["ls"]
   uses = "actions/npm@c555744"
   args = "install"
 }
