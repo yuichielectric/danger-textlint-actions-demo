@@ -2,6 +2,7 @@
 
 Github
 
- - 名前: yuichi
- - 
-test
+ - 名前： yuichi
+ - hello
+
+ - 好きなもの: 読書
