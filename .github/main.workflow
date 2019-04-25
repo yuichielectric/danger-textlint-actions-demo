@@ -8,7 +8,7 @@ action "debug" {
 }
 
 action "ls" {
-  users = "actions/bin/sh@master"
+  uses = "actions/bin/sh@master"
   args = ["ls", "-l", "./node_modules"]
   needs = ["debug"]
 }
