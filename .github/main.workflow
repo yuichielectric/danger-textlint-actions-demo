@@ -20,7 +20,7 @@ action "npm install" {
 }
 
 action "danger" {
-  needs = ["npm install"]
+  needs = ["ls"]
   uses = "yuichielectric/danger-textlint-actions@master"
   secrets = ["GITHUB_TOKEN"]
 }
