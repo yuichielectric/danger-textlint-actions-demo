@@ -1,17 +1,6 @@
-workflow "New workflow" {
+workflow "textlint" {
   resolves = "danger"
   on = "pull_request"
-}
-
-action "debug" {
-  needs = ["npm install"]
-  uses = "actions/bin/debug@master"
-}
-
-action "ls" {
-  uses = "actions/bin/sh@master"
-  args = ["ls -l ./node_modules"]
-  needs = ["debug"]
 }
 
 action "npm install" {
@@ -20,7 +9,7 @@ action "npm install" {
 }
 
 action "danger" {
-  needs = ["ls"]
+  needs = ["npm install"]
   uses = "yuichielectric/danger-textlint-actions@master"
   secrets = ["GITHUB_TOKEN"]
 }
