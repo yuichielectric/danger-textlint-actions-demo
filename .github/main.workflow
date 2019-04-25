@@ -9,7 +9,7 @@ action "debug" {
 
 action "ls" {
   users = "actions/bin/sh@master"
-  args = ["ls" "-l" "./node_modules"]
+  args = ["ls", "-l", "./node_modules"]
   needs = ["debug"]
 }
 
