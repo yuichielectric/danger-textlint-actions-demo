@@ -10,6 +10,6 @@ action "npm install" {
 
 action "danger" {
   needs = ["npm install"]
-  uses = "yuichielectric/danger-textlint-actions@master"
+  uses = "yuichielectric/danger-textlint-actions@danger-suggester"
   secrets = ["GITHUB_TOKEN"]
 }
