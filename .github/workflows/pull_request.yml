@@ -1,0 +1,16 @@
+on: pull_request
+name: textlint
+jobs:
+  npmInstall:
+    name: npm install
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: npm install
+      uses: actions/npm@c555744
+      with:
+        args: install
+    - name: danger
+      uses: yuichielectric/danger-textlint-actions@danger-suggester
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
