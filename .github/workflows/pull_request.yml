@@ -11,6 +11,6 @@ jobs:
           node-version: 10.*
       - run: npm install
       - name: danger
-        uses: yuichielectric/danger-textlint-actions@danger-suggester
+        uses: yuichielectric/danger-textlint-actions@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
